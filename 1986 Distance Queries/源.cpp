@@ -1,29 +1,37 @@
 #include <iostream>
 #include <algorithm>
-#include <vector>
 #include <cmath>
 using namespace std;
 
 struct Edge
 {
-	int From, To, Pow;
+	int From, To, Pow, Next;
+
+	Edge(int from, int to, int pow, int next) :From(from), To(to), Pow(pow), Next(next) {}
+
+	Edge() {}
 };
 
-vector<Edge> G[40001];
-int f[80000], b[80000], pos[40001], index, rmq[80000][18];
+int G[40001];
+Edge E[80000];
+int b[80000], pos[40001], index, rmq[80000][17], cnt;
+
+inline void AddEdge(int from, int to, int pow)
+{
+	E[++cnt] = Edge(from, to, pow, G[from]);
+	G[from] = cnt;
+}
 
 void dfs(int u, int fa, int d)
 {
-	f[++index] = u;
-	b[index] = d;
+	b[++index] = d;
 	pos[u] = index;
-	for (int i = 0; i < G[u].size(); i++)
+	for (int i = G[u]; i != 0; i = E[i].Next)
 	{
-		if (G[u][i].To != fa)
+		if (E[i].To != fa)
 		{
-			dfs(G[u][i].To, u, d + G[u][i].Pow);
-			f[++index] = u;
-			b[index] = d;
+			dfs(E[i].To, u, d + E[i].Pow);
+			b[++index] = d;
 		}
 	}
 }
@@ -38,8 +46,8 @@ int main()
 		int f1, f2, l;
 		char d;
 		cin >> f1 >> f2 >> l >> d;
-		G[f1].push_back(Edge{ f1,f2,l });
-		G[f2].push_back(Edge{ f2,f1,l });
+		AddEdge(f1, f2, l);
+		AddEdge(f2, f1, l);
 	}
 	dfs(1, 0, 0);
 	int log = int(log2(2 * n - 1));
@@ -62,7 +70,7 @@ int main()
 		y = pos[y];
 		if (x > y) swap(x, y);
 		int l = int(log2(y - x));
-		int k = min(rmq[x][l], rmq[y - (1 << l) + 1][l]);
-		cout << b[x] - k + b[y] - k << endl;
+		int xx = min(rmq[x][l], rmq[y - (1 << l) + 1][l]);
+		cout << b[x] - xx + b[y] - xx << endl;
 	}
 }
