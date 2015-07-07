@@ -14,7 +14,7 @@ int main()
 	while (l <= r)
 	{
 		int i = l, j = r;
-		for (; i <= j && ch[i] == ch[j]; i++, j--);
+		for (; i <= j && ch[i] == ch[j]; i++ , j--);
 		if (ch[i] < ch[j]) cout << ch[l++];
 		else cout << ch[r--];
 		if (++cnt == 80)

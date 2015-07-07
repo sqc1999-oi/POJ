@@ -5,29 +5,29 @@
 using namespace std;
 int G[402], m = -1, a[402], p[402];
 const int INF = 0x7fffffff;
+
 struct Node
 {
 	int From, To, Cap, Flow, Next;
 } E[20301];
+
 void AddEdge(int from, int to, int cap)
 {
-	E[++m] = Node { from, to, cap, 0, G[from] };
+	E[++m] = Node{from, to, cap, 0, G[from]};
 	G[from] = m;
-	E[++m] = Node { to, from, 0, 0, G[to] };
+	E[++m] = Node{to, from, 0, 0, G[to]};
 	G[to] = m;
 }
+
 int main()
 {
 	ios::sync_with_stdio(false);
 	memset(G, 255, sizeof G);
 	int n, f, d;
 	cin >> n >> f >> d;
-	for (int i = 1; i <= n; i++)
-		AddEdge(f + i, f + n + i, 1);
-	for (int i = 1; i <= f; i++)
-		AddEdge(0, i, 1);
-	for (int i = 1; i <= d; i++)
-		AddEdge(f + n * 2 + i, f + n * 2 + d + 1, 1);
+	for (int i = 1; i <= n; i++) AddEdge(f + i, f + n + i, 1);
+	for (int i = 1; i <= f; i++) AddEdge(0, i, 1);
+	for (int i = 1; i <= d; i++) AddEdge(f + n * 2 + i, f + n * 2 + d + 1, 1);
 	for (int i = 1; i <= n; i++)
 	{
 		int fi, di;

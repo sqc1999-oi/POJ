@@ -3,18 +3,23 @@
 #include <queue>
 #include <cstring>
 using namespace std;
+
 struct Node
 {
 	int From, To, Pow, Next;
 } E[200001];
+
 int G[5001], cnt;
+
 void AddEdge(int from, int to, int pow)
 {
-	E[++cnt] = Node { from, to, pow, G[from] };
+	E[++cnt] = Node{from, to, pow, G[from]};
 	G[from] = cnt;
 }
+
 int dis[2][5001];
 bool inq[5001];
+
 void Spfa(int s, int f)
 {
 	memset(dis[f], 0x3f, sizeof dis[f]);
@@ -39,6 +44,7 @@ void Spfa(int s, int f)
 		}
 	}
 }
+
 int main()
 {
 	ios::sync_with_stdio(false);

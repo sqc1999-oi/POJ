@@ -7,18 +7,22 @@ using namespace std;
 const int INF = 0x7fffffff;
 int map[51][51];
 int G[2000], m = -1;
+
 struct Node
 {
 	int From, To, Cap, Flow, Next;
 } E[400001];
+
 void AddEdge(int from, int to, int cap)
 {
-	E[++m] = Node { from, to, cap, 0, G[from] };
+	E[++m] = Node{from, to, cap, 0, G[from]};
 	G[from] = m;
-	E[++m] = Node { to, from, 0, 0, G[to] };
+	E[++m] = Node{to, from, 0, 0, G[to]};
 	G[to] = m;
 }
+
 int a[2000], p[2000];
+
 int main()
 {
 	ios::sync_with_stdio(false);
@@ -73,8 +77,7 @@ int main()
 		}
 	}
 	cnt++;
-	for (int i = 0; i < v.size(); i++)
-		AddEdge(v[i], cnt, 1);
+	for (int i = 0; i < v.size(); i++) AddEdge(v[i], cnt, 1);
 	int flow = 0;
 	while (true)
 	{

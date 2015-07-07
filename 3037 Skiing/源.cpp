@@ -4,14 +4,17 @@
 #include <iomanip>
 using namespace std;
 typedef pair<int, int> pii;
-const pii P[] = { pii(1, 0), pii(0, 1), pii(-1, 0), pii(0, -1) };
-pii operator +(const pii &a, const pii &b)
+const pii P[] = {pii(1, 0), pii(0, 1), pii(-1, 0), pii(0, -1)};
+
+pii operator +(const pii& a, const pii& b)
 {
 	return pii(a.first + b.first, a.second + b.second);
 }
+
 int map[101][101];
 double dis[101][101];
 bool inq[101][101];
+
 int main()
 {
 	ios::sync_with_stdio(false);
@@ -24,8 +27,7 @@ int main()
 			cin >> map[i][j];
 		}
 	}
-	for (int i = 1; i <= r; i++)
-		fill(dis[i] + 1, dis[i] + 1 + c, 1e10);
+	for (int i = 1; i <= r; i++) fill(dis[i] + 1, dis[i] + 1 + c, 1e10);
 	queue<pii> q;
 	q.push(pii(1, 1));
 	inq[1][1] = true;

@@ -2,6 +2,7 @@
 #include <algorithm>
 using namespace std;
 int f[2001], a[2001], b[2001];
+
 int main()
 {
 	ios::sync_with_stdio(false);
