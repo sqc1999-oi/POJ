@@ -4,26 +4,24 @@
 #include <cstring>
 #include <climits>
 using namespace std;
-
 struct Edge
 {
 	int To, Pow, Next;
-
 	Edge(int to, int pow, int next) :
-		To(to), Pow(pow), Next(next) { }
-
-	Edge() { }
+			To(to), Pow(pow), Next(next)
+	{
+	}
+	Edge()
+	{
+	}
 } E[500001];
-
 int G[50001], dis[50001], cnt;
 bool inq[50001];
-
 void AddEdge(int from, int to, int pow)
 {
 	E[++cnt] = Edge(to, pow, G[from]);
 	G[from] = cnt;
 }
-
 int main()
 {
 	ios::sync_with_stdio(false);
