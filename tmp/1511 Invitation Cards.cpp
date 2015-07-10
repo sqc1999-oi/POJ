@@ -4,20 +4,19 @@
 #include <cstring>
 #include <climits>
 using namespace std;
-
 struct Edge
 {
 	int To, Pow, Next;
-
 	Edge(int to, int pow, int next) :
-		To(to), Pow(pow), Next(next) { }
-
-	Edge() { }
+			To(to), Pow(pow), Next(next)
+	{
+	}
+	Edge()
+	{
+	}
 } E[2][1000001];
-
 int G[2][1000001], dis[2][1000001], cnt;
 bool inq[2][1000001];
-
 void AddEdge(int from, int to, int pow)
 {
 	cnt++;
@@ -26,7 +25,6 @@ void AddEdge(int from, int to, int pow)
 	E[1][cnt] = Edge(from, pow, G[1][to]);
 	G[1][to] = cnt;
 }
-
 int main()
 {
 	int t;

@@ -3,10 +3,9 @@
 #include <queue>
 using namespace std;
 typedef pair<int, int> pii;
-priority_queue<pii, vector<pii>, greater<pii>> q1;
+priority_queue<pii, vector<pii>, greater<pii> > q1;
 priority_queue<pii> q2;
 int a[1000001];
-
 int main()
 {
 	ios::sync_with_stdio(false);
