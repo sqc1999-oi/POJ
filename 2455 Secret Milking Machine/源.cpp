@@ -2,27 +2,33 @@
 #include <algorithm>
 #include <cstring>
 using namespace std;
+
 struct Edge
 {
 	int From, To, Pow, Cap, Flow, Next;
 } E[80001];
+
 struct e
 {
 	int From, To, Pow;
-	bool operator <(const e &b) const
+
+	bool operator <(const e& b) const
 	{
 		return Pow < b.Pow;
 	}
 } Edges[40001];
+
 const int INF = 0x7fffffff;
 int G[201], a[201], p[201], M, q[70000];
+
 void AddEdge(int from, int to, int pow, int cap)
 {
-	E[++M] = Edge { from, to, pow, cap, 0, G[from] };
+	E[++M] = Edge{from, to, pow, cap, 0, G[from]};
 	G[from] = M;
-	E[++M] = Edge { to, from, pow, cap, 0, G[to] };
+	E[++M] = Edge{to, from, pow, cap, 0, G[to]};
 	G[to] = M;
 }
+
 bool EK(int s, int t, int pow_limit, int flow_limit, int m)
 {
 	int flow = 0;
@@ -63,6 +69,7 @@ bool EK(int s, int t, int pow_limit, int flow_limit, int m)
 		if (flow >= flow_limit) return true;
 	}
 }
+
 int main()
 {
 	int n, p, t, l = INF, r = 0;
@@ -71,7 +78,7 @@ int main()
 	{
 		int A, B, L;
 		scanf("%d%d%d", &A, &B, &L);
-		Edges[i] = e { A, B, L };
+		Edges[i] = e{A, B, L};
 		l = min(l, L);
 		r = max(r, L);
 	}
