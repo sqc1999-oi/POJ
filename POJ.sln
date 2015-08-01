@@ -413,6 +413,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2210 Metric Time", "2210 Me
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3276 Face The Right Way", "3276 Face The Right Way\3276 Face The Right Way.vcxproj", "{DE985909-4AC7-46A6-83CF-D3FC3AE87A60}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2227 The Wedding Juicer", "2227 The Wedding Juicer\2227 The Wedding Juicer.vcxproj", "{C31880EB-E489-43FC-BAA2-09C4FE08F431}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -2209,6 +2211,16 @@ Global
 		{DE985909-4AC7-46A6-83CF-D3FC3AE87A60}.Release|x64.Build.0 = Release|x64
 		{DE985909-4AC7-46A6-83CF-D3FC3AE87A60}.Release|x86.ActiveCfg = Release|Win32
 		{DE985909-4AC7-46A6-83CF-D3FC3AE87A60}.Release|x86.Build.0 = Release|Win32
+		{C31880EB-E489-43FC-BAA2-09C4FE08F431}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{C31880EB-E489-43FC-BAA2-09C4FE08F431}.Debug|x64.ActiveCfg = Debug|x64
+		{C31880EB-E489-43FC-BAA2-09C4FE08F431}.Debug|x64.Build.0 = Debug|x64
+		{C31880EB-E489-43FC-BAA2-09C4FE08F431}.Debug|x86.ActiveCfg = Debug|Win32
+		{C31880EB-E489-43FC-BAA2-09C4FE08F431}.Debug|x86.Build.0 = Debug|Win32
+		{C31880EB-E489-43FC-BAA2-09C4FE08F431}.Release|Any CPU.ActiveCfg = Release|Win32
+		{C31880EB-E489-43FC-BAA2-09C4FE08F431}.Release|x64.ActiveCfg = Release|x64
+		{C31880EB-E489-43FC-BAA2-09C4FE08F431}.Release|x64.Build.0 = Release|x64
+		{C31880EB-E489-43FC-BAA2-09C4FE08F431}.Release|x86.ActiveCfg = Release|Win32
+		{C31880EB-E489-43FC-BAA2-09C4FE08F431}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include <cstring>
 using namespace std;
 int flag[5001], tmp[5001];
 int main()
