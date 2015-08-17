@@ -1,6 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <queue>
+#include <functional>
 using namespace std;
 typedef pair<int, int> pii;
 priority_queue<pii, vector<pii>, greater<pii>> q1;

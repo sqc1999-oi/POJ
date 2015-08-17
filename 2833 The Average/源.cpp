@@ -1,6 +1,8 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <cstdio>
 #include <algorithm>
 #include <queue>
+#include <functional>
 using namespace std;
 priority_queue<int, vector<int>, greater<int>> q1;
 priority_queue<int> q2;
