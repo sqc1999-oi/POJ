@@ -6,7 +6,7 @@ using namespace std;
 
 #define Maxn 132000
 
-//ºê¶¨Òå×îºÃÈ«¼ÓÉÏÀ¨ºÅ
+//ï¿½ê¶¨ï¿½ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #define lx (x<<1)
 #define rx ((x<<1) | 1)
 #define MID ((l + r)>>1)
@@ -18,17 +18,17 @@ bool vis[Maxn + 5];
 void FXOR(int x)
 {
 	if (cover[x] != -1) cover[x] ^= 1;
-	//×¢ÒâÊÇelse
+	//×¢ï¿½ï¿½ï¿½ï¿½else
 	else XOR[x] ^= 1;
 }
 
 void pushDown(int x)
 {
-	//cover[x] == -1´ú±íx½ÚµãµÄ¸²¸Ç¹¤×÷ÒÑ¾­½áÊø
+	//cover[x] == -1ï¿½ï¿½ï¿½ï¿½xï¿½Úµï¿½Ä¸ï¿½ï¿½Ç¹ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½
 	if (cover[x] != -1)
 	{
 		cover[lx] = cover[rx] = cover[x];
-		XOR[lx] = XOR[rx] = 0;//¼ÈÈ»ÒÑ¾­¸²¸ÇÒì»ò±ê¼Ç¾ÍÇåÁã
+		XOR[lx] = XOR[rx] = 0;//ï¿½ï¿½È»ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½ï¿½
 		cover[x] = -1;
 	}
 	if (XOR[x])
@@ -48,7 +48,7 @@ void update(int L, int R, char op, int l, int r, int x)
 			cover[x] = 1;
 			XOR[x] = 0;
 		}
-		//op == 'I'µÄÇé¿ö£¬ÓÉÓÚL<=l && r<=R£¬ËùÒÔ²»ÐèÒªÌÖÂÛ
+		//op == 'I'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½L<=l && r<=Rï¿½ï¿½ï¿½ï¿½ï¿½Ô²ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
 		else if (op == 'D')
 		{
 			cover[x] = 0;
@@ -65,7 +65,7 @@ void update(int L, int R, char op, int l, int r, int x)
 	else if (op == 'I' || op == 'C') cover[rx] = XOR[rx] = 0;
 }
 
-//Ö»ÊÊºÏÓÚÒ»´Î²éÑ¯
+//Ö»ï¿½Êºï¿½ï¿½ï¿½Ò»ï¿½Î²ï¿½Ñ¯
 void query(int l, int r, int x)
 {
 	if (cover[x] == 1)
