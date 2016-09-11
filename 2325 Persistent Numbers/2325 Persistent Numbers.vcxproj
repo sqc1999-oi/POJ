@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C60365DD-76D2-4C5D-83B2-B965E4B3AC86}</ProjectGuid>
     <RootNamespace>My2325PersistentNumbers</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
     <ProjectName>2325 Persistent Numbers(java)</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
