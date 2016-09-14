@@ -119,8 +119,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="源_Hasmain.cpp" />
-    <ClCompile Include="源_Smain.cpp" />
+    <ClCompile Include="main_Hash.cpp" />
+    <ClCompile Include="main_SA.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
