@@ -1,4 +1,4 @@
-#include<iostream>
+﻿#include<iostream>
 #include<algorithm>
 using namespace std;
 int n, map[26][26];

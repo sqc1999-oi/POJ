@@ -1,4 +1,4 @@
-#include<iostream>
+﻿#include<iostream>
 #include<algorithm>
 using namespace std;
 int x[800], y[800], a[100000000], b[100000000], c[100000000];

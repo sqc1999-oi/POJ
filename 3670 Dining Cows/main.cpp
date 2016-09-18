@@ -1,4 +1,4 @@
-#include<iostream>
+﻿#include<iostream>
 #include<algorithm>
 using namespace std;
 int sum1[30001], sum2[30001];

@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <algorithm>
 using namespace std;
 long long a[500001], tmp[500001];

@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <algorithm>
 using namespace std;
 struct cow { int w, s; } a[50001];

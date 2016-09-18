@@ -1,4 +1,4 @@
-#include <cstdio>
+﻿#include <cstdio>
 #define sqr(a) (a)*(a)
 #define max(a, b) (a) > (b) ? (a) : (b);
 char map[101][101];

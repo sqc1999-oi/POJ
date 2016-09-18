@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <algorithm>
 using namespace std;
 unsigned a[1001], n, c;

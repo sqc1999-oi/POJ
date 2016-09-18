@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <algorithm>
 using namespace std;
 int f[2001], a[2001], b[2001];

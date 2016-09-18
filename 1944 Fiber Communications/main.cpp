@@ -1,4 +1,4 @@
-#include<iostream>
+﻿#include<iostream>
 #include<algorithm>
 using namespace std;
 pair<int, int> ps[10001];

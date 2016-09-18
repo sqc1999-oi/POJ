@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <algorithm>
 using namespace std;
 long long gcd(long long a, long long b) { return b == 0 ? a : gcd(b, a%b); }

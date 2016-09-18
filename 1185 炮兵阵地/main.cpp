@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <algorithm>
 using namespace std;
 int n, m, cnt, S[61], map[101], f[101][61][61], Cnt[60];
