@@ -1,4 +1,6 @@
-﻿#include <string.h>
+﻿#define _CRT_SECURE_NO_WARNINGS
+
+#include <string.h>
 #include <stdio.h>
 
 #define max(a, b) (a)>(b)?(a):(b)

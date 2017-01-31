@@ -1,4 +1,6 @@
-﻿#include <cstdio>
+﻿#define _CRT_SECURE_NO_WARNINGS
+
+#include <cstdio>
 #define sqr(a) (a)*(a)
 #define max(a, b) (a) > (b) ? (a) : (b);
 char map[101][101];
